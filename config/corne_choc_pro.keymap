@@ -52,6 +52,114 @@
             #binding-cells = <0>;
             bindings = <&none>, <&sys_reset>;
         };
+
+        RGB_TOG_SHIFT_OFF: RGB_TOG_SHIFT_OFF {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RGB_TOG_SHIFT_OFF";
+            bindings = <&rgb_ug RGB_TOG>, <&rgb_ug RGB_OFF>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        RGB_NEXT_MODE_SHIFT_PREV: RGB_NEXT_MODE_SHIFT_PREV {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RGB_NEXT_MODE_SHIFT_PREV";
+            bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        RGB_HUE_UP_SHIFT_DOWN: RGB_HUE_UP_SHIFT_DOWN {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RGB_HUE_UP_SHIFT_DOWN";
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        RGB_SAT_UP_SHIFT_DOWN: RGB_SAT_UP_SHIFT_DOWN {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RGB_SAT_UP_SHIFT_DOWN";
+            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        RGB_BRI_UP_SHIFT_DOWN: RGB_BRI_UP_SHIFT_DOWN {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RGB_BRI_UP_SHIFT_DOWN";
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        EP_TOG_SHIFT_OFF: EP_TOG_SHIFT_OFF {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EP_TOG_SHIFT_OFF";
+            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        OUT_TOG_SHIFT_USB: OUT_TOG_SHIFT_USB {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OUT_TOG_SHIFT_USB";
+            bindings = <&out OUT_TOG>, <&out OUT_USB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        BT_0_SHIFT_CLEAR: BT_0_SHIFT_CLEAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_0_SHIFT_CLEAR";
+            bindings = <&bt BT_SEL 0>, <&SEL_AND_CLEAR_BT 0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        BT_1_SHIFT_CLEAR: BT_1_SHIFT_CLEAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_1_SHIFT_CLEAR";
+            bindings = <&bt BT_SEL 1>, <&SEL_AND_CLEAR_BT 1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        BT_2_SHIFT_CLEAR: BT_2_SHIFT_CLEAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_2_SHIFT_CLEAR";
+            bindings = <&bt BT_SEL 2>, <&SEL_AND_CLEAR_BT 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        BT_3_SHIFT_CLEAR: BT_3_SHIFT_CLEAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_3_SHIFT_CLEAR";
+            bindings = <&bt BT_SEL 3>, <&SEL_AND_CLEAR_BT 3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+    };
+
+    macros {
+        SEL_AND_CLEAR_BT: SEL_AND_CLEAR_BT {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &bt BT_CLR>;
+            label = "SEL_AND_CLEAR_BT";
+        };
     };
 
     keymap {
@@ -114,10 +222,10 @@
 
         Media {
             bindings = <
-&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI    &rgb_ug RGB_BRI  &rgb_ug RGB_TOG    &trans
-&trans          &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp K_PREV       &kp K_VOLUME_UP   &kp K_VOLUME_DOWN  &kp K_NEXT       &ext_power EP_TOG  &trans
-&trans          &trans                &trans         &trans           &trans          &trans                                 &out OUT_TOG     &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3       &trans
-                                                     &none            &trans          &trans                                 &kp K_STOP       &kp K_PLAY_PAUSE  &kp K_MUTE
+&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &trans
+&trans          &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp C_PREV          &kp C_VOL_UP               &kp C_VOL_DN            &kp C_NEXT              &EP_TOG_SHIFT_OFF       &trans
+&trans          &trans                &trans         &trans           &trans          &trans                                 &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &trans
+                                                     &none            &trans          &trans                                 &kp C_AC_STOP       &kp C_PLAY_PAUSE           &kp C_MUTE
             >;
 
             label = "Media";
