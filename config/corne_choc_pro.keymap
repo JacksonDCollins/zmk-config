@@ -52,6 +52,13 @@
             #binding-cells = <0>;
             bindings = <&none>, <&sys_reset>;
         };
+
+        studio_unlock_double_tap: studio_unlock_double_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "STUDIO_UNLOCK_DOUBLE_TAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&studio_unlock_double_tap>;
+        };
     };
 
     keymap {
@@ -92,10 +99,10 @@
 
         Nav {
             bindings = <
-&trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
-&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp CAPS    &trans
-&trans  &trans                &trans         &trans           &trans          &trans                                 &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    &kp INSERT  &trans
-                                             &trans           &none           &trans                                 &kp RET     &kp BSPC     &kp DEL
+&studio_unlock_double_tap  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
+&trans                     &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp CAPS    &trans
+&trans                     &trans                &trans         &trans           &trans          &trans                                 &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    &kp INSERT  &trans
+                                                                &trans           &none           &trans                                 &kp RET     &kp BSPC     &kp DEL
             >;
 
             label = "Nav";
@@ -103,10 +110,10 @@
 
         Mouse {
             bindings = <
-&trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &trans
-&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans      &trans
-&trans  &trans                &trans         &trans           &trans          &trans                                 &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_DOWN   &trans      &trans
-                                             &trans           &trans          &none                                  &mkp RCLK       &mkp LCLK       &mkp MCLK
+&studio_unlock_double_tap  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &trans
+&trans                     &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans      &trans
+&trans                     &trans                &trans         &trans           &trans          &trans                                 &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_DOWN   &trans      &trans
+                                                                &trans           &trans          &none                                  &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
 
             label = "Mouse";
@@ -114,10 +121,10 @@
 
         Media {
             bindings = <
-&trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI    &rgb_ug RGB_BRI  &rgb_ug RGB_TOG    &trans
-&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp K_PREV       &kp K_VOLUME_UP   &kp K_VOLUME_DOWN  &kp K_NEXT       &ext_power EP_TOG  &trans
-&trans  &trans                &trans         &trans           &trans          &trans                                 &out OUT_TOG     &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3       &trans
-                                             &none            &trans          &trans                                 &kp K_STOP       &kp K_PLAY_PAUSE  &kp K_MUTE
+&studio_unlock_double_tap  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI    &rgb_ug RGB_BRI  &rgb_ug RGB_TOG    &trans
+&trans                     &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp K_PREV       &kp K_VOLUME_UP   &kp K_VOLUME_DOWN  &kp K_NEXT       &ext_power EP_TOG  &trans
+&trans                     &trans                &trans         &trans           &trans          &trans                                 &out OUT_TOG     &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3       &trans
+                                                                &none            &trans          &trans                                 &kp K_STOP       &kp K_PLAY_PAUSE  &kp K_MUTE
             >;
 
             label = "Media";
@@ -125,7 +132,7 @@
 
         Num {
             bindings = <
-&trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &trans
+&trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock_double_tap
 &trans  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL  &trans  &trans  &trans                 &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &trans
 &trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH                   &trans                 &trans           &trans           &trans         &trans                &trans
                            &kp DOT  &kp N0  &kp MINUS                  &trans                 &none            &trans
@@ -136,7 +143,7 @@
 
         Sym {
             bindings = <
-&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &trans
+&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock_double_tap
 &trans  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS         &trans  &trans  &trans                 &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &trans
 &trans  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp EXCLAMATION                  &trans                 &trans           &trans           &trans         &trans                &trans
                                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                   &none                  &trans           &trans
@@ -147,7 +154,7 @@
 
         Fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN  &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &trans
+&trans  &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN  &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock_double_tap
 &trans  &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK   &trans  &trans  &trans                 &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &trans
 &trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK                  &trans                 &trans           &trans           &trans         &trans                &trans
                          &kp K_APP  &kp SPACE  &kp TAB                          &trans                 &trans           &none
