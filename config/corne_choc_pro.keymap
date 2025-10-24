@@ -176,10 +176,10 @@
 
         Base {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F      &kp P        &kp B      &trans  &trans  &kp J        &kp L            &kp U         &kp Y    &kp SQT   &kp BSPC
-&kp LCTRL  &kp A  &kp R  &kp S      &kp T        &kp G      &trans  &trans  &kp M        &kp N            &kp E         &kp I    &kp O     &kp LGUI
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp D        &kp V                      &kp K        &kp H            &kp COMMA     &kp DOT  &kp FSLH  &kp RALT
-                         &lt 5 ESC  &lt 3 SPACE  &lt 4 TAB                  &lt 7 ENTER  &lt 6 BACKSPACE  &lt 8 DELETE
+&kp TAB    &kp Q       &kp W           &kp F        &kp P             &kp B      &trans  &trans  &kp J        &kp L              &kp U         &kp Y            &kp SQT     &kp BSPC
+&kp LCTRL  &mt LGUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &trans  &trans  &kp M        &mt RIGHT_SHIFT N  &mt RCTRL E   &mt RIGHT_ALT I  &mt LGUI O  &kp LGUI
+&kp LSHFT  &kp Z       &kp X           &kp C        &kp D             &kp V                      &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH    &kp RALT
+                                       &lt 5 ESC    &lt 3 SPACE       &lt 4 TAB                  &lt 7 ENTER  &lt 6 BACKSPACE    &lt 8 DELETE
             >;
 
             label = "Base";
@@ -199,7 +199,7 @@
         Tap {
             bindings = <
 &trans  &trans  &trans  &trans   &trans     &trans   &trans  &trans  &trans   &trans    &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans     &trans   &trans  &trans  &trans   &trans    &trans   &trans  &trans  &trans
+&trans  &kp A   &kp R   &kp S    &kp T      &trans   &trans  &trans  &trans   &kp N     &kp E    &kp I   &kp O   &trans
 &trans  &trans  &trans  &trans   &trans     &trans                   &trans   &trans    &trans   &trans  &trans  &TAP_KP_HOLD_TO_LAYER RIGHT_ALT 0
                         &kp ESC  &kp SPACE  &kp TAB                  &kp RET  &kp BSPC  &kp DEL
             >;
@@ -209,10 +209,10 @@
 
         Nav {
             bindings = <
-&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
-&trans          &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp CAPS    &trans
-&trans          &trans                &trans         &trans           &trans          &trans                                 &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    &kp INSERT  &trans
-                                                     &trans           &none           &trans                                 &kp RET     &kp BSPC     &kp DEL
+&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &none  &none  &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &none
+&none           &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &none                  &none  &none  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp CAPS    &none
+&none           &none                 &none          &none            &none           &none                                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    &kp INSERT  &none
+                                                     &none            &none           &none                                &kp RET     &kp BSPC     &kp DEL
             >;
 
             label = "Nav";
@@ -220,10 +220,10 @@
 
         Mouse {
             bindings = <
-&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &trans
-&trans          &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans      &trans
-&trans          &trans                &trans         &trans           &trans          &trans                                 &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_DOWN   &trans      &trans
-                                                     &trans           &trans          &none                                  &mkp RCLK       &mkp LCLK       &mkp MCLK
+&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &none  &none  &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &none
+&none           &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &none                  &none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none       &none
+&none           &none                 &none          &none            &none           &none                                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_DOWN   &none       &none
+                                                     &none            &none           &none                                &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
 
             label = "Mouse";
@@ -231,10 +231,10 @@
 
         Media {
             bindings = <
-&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &trans  &trans  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &trans
-&trans          &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans                 &trans  &trans  &kp C_PREV          &kp C_VOL_UP               &kp C_VOL_DN            &kp C_NEXT              &EP_TOG_SHIFT_OFF       &trans
-&trans          &trans                &trans         &trans           &trans          &trans                                 &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &trans
-                                                     &none            &trans          &trans                                 &kp C_AC_STOP       &kp C_PLAY_PAUSE           &kp C_MUTE
+&studio_unlock  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &sys_reset_double_tep  &none  &none  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &none
+&none           &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &none                  &none  &none  &kp C_PREV          &kp C_VOL_UP               &kp C_VOL_DN            &kp C_NEXT              &EP_TOG_SHIFT_OFF       &none
+&none           &none                 &none          &none            &none           &none                                &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &none
+                                                     &none            &none           &none                                &kp C_AC_STOP       &kp C_PLAY_PAUSE           &kp C_MUTE
             >;
 
             label = "Media";
@@ -242,10 +242,10 @@
 
         Num {
             bindings = <
-&trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock
-&trans  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL  &trans  &trans  &trans                 &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &trans
-&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH                   &trans                 &trans           &trans           &trans         &trans                &trans
-                           &kp DOT  &kp N0  &kp MINUS                  &trans                 &none            &trans
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &none  &none  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock
+&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL  &none  &none  &none                  &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &none
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH                 &none                  &none            &none            &none          &none                 &none
+                          &kp DOT  &kp N0  &kp MINUS                &none                  &none            &none
             >;
 
             label = "Num";
@@ -253,10 +253,10 @@
 
         Sym {
             bindings = <
-&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock
-&trans  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS         &trans  &trans  &trans                 &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &trans
-&trans  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp EXCLAMATION                  &trans                 &trans           &trans           &trans         &trans                &trans
-                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                   &none                  &trans           &trans
+&none  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &none  &none  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock
+&none  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS         &none  &none  &none                  &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &none
+&none  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp EXCLAMATION                &none                  &none            &none            &none          &none                 &none
+                                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                 &none                  &none            &none
             >;
 
             label = "Sym";
@@ -264,10 +264,10 @@
 
         Fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN  &trans  &trans  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock
-&trans  &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK   &trans  &trans  &trans                 &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &trans
-&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK                  &trans                 &trans           &trans           &trans         &trans                &trans
-                         &kp K_APP  &kp SPACE  &kp TAB                          &trans                 &trans           &none
+&none  &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN  &none  &none  &sys_reset_double_tep  &to_base_layer   &to_extra_layer  &to_tap_layer  &activate_bootloader  &studio_unlock
+&none  &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK   &none  &none  &none                  &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT  &kp LGUI              &none
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK                &none                  &none            &none            &none          &none                 &none
+                        &kp K_APP  &kp SPACE  &kp TAB                        &none                  &none            &none
             >;
 
             label = "Fun";
