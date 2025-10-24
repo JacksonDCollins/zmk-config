@@ -80,8 +80,8 @@
         Nav {
             bindings = <
 &trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &trans  &trans  &trans  &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
-&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans  &trans  &trans  &kp CAPS    &kp LEFT     &kp DOWN    &kp UP     &kp RIGHT   &trans
-&trans  &trans                &trans         &trans           &trans          &trans                  &kp INSERT  &kp HOME     &kp PG_UP   &kp PG_DN  &kp END     &trans
+&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans  &trans  &trans  &kp LEFT     &kp DOWN    &kp UP     &kp RIGHT   &kp CAPS    &trans
+&trans  &trans                &trans         &trans           &trans          &trans                  &kp HOME     &kp PG_UP   &kp PG_DN  &kp END     &kp INSERT  &trans
                                              &trans           &none           &trans                  &kp RET     &kp BSPC     &kp DEL
             >;
         };
@@ -89,16 +89,16 @@
         Mouse {
             bindings = <
 &trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &trans  &trans  &trans  &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &trans
-&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans  &trans  &trans  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans                &trans         &trans           &trans          &trans                  &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_DOWN   &trans
+&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans      &trans
+&trans  &trans                &trans         &trans           &trans          &trans                  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_DOWN   &trans      &trans
                                              &trans           &trans          &none                   &mkp RCLK   &mkp LCLK       &mkp MCLK
             >;
         };
 
         Media {
             bindings = <
-&trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &trans  &trans  &trans  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI    &rgb_ug RGB_BRI  &trans
-&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans  &trans  &trans  &ext_power EP_TOG  &kp K_PREV        &kp K_VOLUME_UP  &kp K_VOLUME_DOWN  &kp K_NEXT       &trans
+&trans  &activate_bootloader  &to_tap_layer  &to_extra_layer  &to_base_layer  &trans  &trans  &trans  &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI    &rgb_ug RGB_BRI  &rgb_ug RGB_TOG    &trans
+&trans  &kp LGUI              &kp LALT       &kp LCTRL        &kp LSHFT       &trans  &trans  &trans &kp K_PREV        &kp K_VOLUME_UP  &kp K_VOLUME_DOWN  &kp K_NEXT        &ext_power EP_TOG  &trans
 &trans  &trans                &trans         &trans           &trans          &trans                  &out OUT_TOG       &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3     &trans
                                              &none            &trans          &trans                  &kp K_STOP         &kp K_PLAY_PAUSE  &kp K_MUTE
             >;
