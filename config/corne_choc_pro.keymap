@@ -221,7 +221,7 @@
             bindings = <
 &studio_unlock  &activate_bootloader  &to_tap_layer     &to_extra_layer    &to_base_layer     &sys_reset_double_tep  &none  &none  &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &none
 &none           &hrm_sticky LGUI      &hrm_sticky LALT  &hrm_sticky LCTRL  &hrm_sticky LSHFT  &none                  &none  &none  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp CAPS    &none
-&none           &none                 &none             &none              &none              &none                                &kp HOME    &kp PG_UP    &kp PG_DN   &kp END    &kp INSERT  &none
+&none           &none                 &none             &none              &none              &none                                &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp INSERT  &none
                                                         &none              &none              &none                                &kp RET     &kp BSPC     &kp DEL
             >;
 
