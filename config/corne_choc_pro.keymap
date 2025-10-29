@@ -200,7 +200,7 @@
 &kp TAB               &kp Q  &kp W  &kp F              &kp P                     &kp B         &trans  &trans  &kp J      &kp L                         &kp U                    &kp Y    &kp SQT   &kp DEL
 &hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S              &kp T                     &kp G         &trans  &trans  &kp M      &kp N                         &kp E                    &kp I    &kp O     &hrm_sticky LGUI
 &hrm_sticky LSHFT     &kp Z  &kp X  &kp C              &kp D                     &kp V                         &kp K      &kp H                         &kp COMMA                &kp DOT  &kp FSLH  &sl 3
-                                    &hrm_sticky LCTRL  &better_hold_tap 1 SPACE  &mt LGUI TAB                  &kp ENTER  &better_hold_tap 2 BACKSPACE  &hrm_sticky RIGHT_SHIFT
+                                    &hrm_sticky LCTRL  &better_hold_tap 2 SPACE  &mt LGUI TAB                  &kp ENTER  &better_hold_tap 1 BACKSPACE  &hrm_sticky RIGHT_SHIFT
             >;
         };
 
@@ -209,7 +209,7 @@
 &trans  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR      &kp PERCENT       &trans  &trans  &kp CARET          &kp AMPS         &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
 &trans  &kp N1     &kp N2     &kp N3     &kp N4          &kp N5            &trans  &trans  &kp N6             &kp N7           &kp N8     &kp N9                &kp N0                 &trans
 &trans  &kp TILDE  &kp GRAVE  &kp COLON  &kp LEFT_BRACE  &kp LEFT_BRACKET                  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS  &kp EQUAL             &kp SEMI               &trans
-                              &trans     &trans          &none                             &trans             &trans           &trans
+                              &trans     &trans          &trans                            &trans             &none            &trans
             >;
 
             label = "lower";
@@ -220,7 +220,7 @@
 &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &trans
 &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &kp K_MENU        &trans
 &caps_word  &trans  &trans  &trans  &trans  &trans                  &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &kp INS           &trans
-                            &trans  &trans  &trans                  &none       &trans        &trans
+                            &trans  &none   &trans                  &trans      &trans        &trans
             >;
 
             label = "Raise";
