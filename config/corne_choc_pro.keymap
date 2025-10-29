@@ -196,6 +196,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        better_mod_tap: better_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BETTER_MOD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <150>;
+            retro-tap;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -213,10 +225,10 @@
         Base {
             label = "Base";
             bindings = <
-&kp TAB               &kp Q  &kp W  &kp F          &kp P      &kp B                         &trans  &trans  &kp J                           &kp L               &kp U                             &kp Y    &kp SQT   &kp DEL
-&hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S          &kp T      &kp G                         &trans  &trans  &kp M                           &kp N               &kp E                             &kp I    &kp O     &hrm_sticky LGUI
-&hrm_sticky LSHFT     &kp Z  &kp X  &kp C          &kp D      &kp V                                         &kp K                           &kp H               &kp COMMA                         &kp DOT  &kp FSLH  &sl 4
-                                    &mt LCTRL ESC  &kp SPACE  &better_layer_hold_tap 2 TAB                  &better_layer_hold_tap 1 ENTER  &mt LGUI BACKSPACE  &shift_key_hold_tap LEFT_SHIFT 0
+&kp TAB               &kp Q  &kp W  &kp F                      &kp P      &kp B                         &trans  &trans  &kp J                           &kp L                           &kp U                             &kp Y    &kp SQT   &kp DEL
+&hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S                      &kp T      &kp G                         &trans  &trans  &kp M                           &kp N                           &kp E                             &kp I    &kp O     &hrm_sticky LGUI
+&hrm_sticky LSHFT     &kp Z  &kp X  &kp C                      &kp D      &kp V                                         &kp K                           &kp H                           &kp COMMA                         &kp DOT  &kp FSLH  &sl 4
+                                    &better_mod_tap LCTRL ESC  &kp SPACE  &better_layer_hold_tap 2 TAB                  &better_layer_hold_tap 1 ENTER  &better_mod_tap LGUI BACKSPACE  &shift_key_hold_tap LEFT_SHIFT 0
             >;
         };
 
