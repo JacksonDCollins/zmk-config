@@ -198,7 +198,7 @@
             label = "Base";
             bindings = <
 &kp TAB               &kp Q  &kp W  &kp F              &kp P           &kp B                   &trans  &trans  &kp J                     &kp L     &kp U                    &kp Y    &kp SQT   &kp DEL
-&hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S              &kp T           &kp G                   &trans  &trans  &kp M                     &kp N     &kp E                    &kp I    &kp O     &hrm_sticky RIGHT_ALT
+&hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S              &kp T           &kp G                   &trans  &trans  &kp M                     &kp N     &kp E                    &kp I    &kp O     &hrm_sticky LGUI
 &hrm_sticky LSHFT     &kp Z  &kp X  &kp C              &kp D           &kp V                                   &kp K                     &kp H     &kp COMMA                &kp DOT  &kp FSLH  &sl 3
                                     &hrm_sticky LCTRL  &mt LGUI SPACE  &better_hold_tap 1 TAB                  &better_hold_tap 2 ENTER  &kp BSPC  &hrm_sticky RIGHT_SHIFT
             >;
@@ -209,7 +209,7 @@
 &trans  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR      &kp PERCENT       &trans  &trans  &kp CARET          &kp AMPS         &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
 &trans  &kp N1     &kp N2     &kp N3     &kp N4          &kp N5            &trans  &trans  &kp N6             &kp N7           &kp N8     &kp N9                &kp N0                 &trans
 &trans  &kp TILDE  &kp GRAVE  &kp COLON  &kp LEFT_BRACE  &kp LEFT_BRACKET                  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans     &trans                &trans                 &trans
-                              &trans     &trans          &trans                            &trans             &trans           &trans
+                              &trans     &trans          &none                             &trans             &trans           &trans
             >;
 
             label = "lower";
@@ -220,7 +220,7 @@
 &trans  &trans  &trans  &kp UNDERSCORE  &kp PLUS    &trans       &trans  &trans  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &trans
 &trans  &trans  &trans  &kp MINUS       &kp EQUAL   &trans       &trans  &trans  &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &kp K_MENU        &trans
 &trans  &trans  &trans  &kp SEMICOLON   &kp K_COPY  &kp K_PASTE                  &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &kp INS           &trans
-                        &trans          &trans      &trans                       &trans      &trans        &trans
+                        &trans          &trans      &trans                       &none       &trans        &trans
             >;
 
             label = "Raise";
@@ -228,10 +228,10 @@
 
         Function {
             bindings = <
-&trans  &kp F1    &kp F2   &kp F3                 &kp F4          &kp F5                &trans  &trans  &kp F6              &kp F7                     &kp F8                  &kp F9                  &kp F10                 &trans
-&trans  &kp F11   &kp F12  &trans                 &trans          &trans                &trans  &trans  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &trans
-&trans  &kp CAPS  &trans   &sys_reset_double_tep  &studio_unlock  &activate_bootloader                  &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &trans
-                           &trans                 &trans          &trans                                &trans              &trans                     &trans
+&trans  &kp F1    &kp F2   &kp F3      &kp F4          &kp F5       &trans  &trans  &kp F6              &kp F7                     &kp F8                  &kp F9                  &kp F10                 &trans
+&trans  &kp F11   &kp F12  &trans      &trans          &trans       &trans  &trans  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &trans
+&trans  &kp CAPS  &trans   &sys_reset  &studio_unlock  &bootloader                  &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &hrm_sticky LEFT_ALT
+                           &trans      &trans          &trans                       &trans              &trans                     &trans
             >;
 
             label = "Function";
