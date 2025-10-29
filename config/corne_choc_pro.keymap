@@ -170,15 +170,31 @@
             ignore-modifiers;
         };
 
-        better_hold_tap: better_hold_tap {
+        better_layer_hold_tap: better_layer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "BETTER_HOLD_TAP";
+            label = "BETTER_LAYER_HOLD_TAP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
             quick-tap-ms = <150>;
             retro-tap;
+        };
+
+        sticky_shift_caps_word_caps_lk: sticky_shift_caps_word_caps_lk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "STICKY_SHIFT_CAPS_WORD_CAPS_LK";
+            #binding-cells = <0>;
+            bindings = <&hrm_sticky LEFT_SHIFT>, <&caps_word>, <&kp CAPS>;
+        };
+
+        shift_key_hold_tap: shift_key_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_KEY_HOLD_TAP";
+            bindings = <&kp>, <&sticky_shift_caps_word_caps_lk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
         };
     };
 
@@ -197,10 +213,10 @@
         Base {
             label = "Base";
             bindings = <
-&kp TAB               &kp Q  &kp W  &kp F              &kp P                     &kp B         &trans  &trans  &kp J                   &kp L                         &kp U      &kp Y    &kp SQT   &kp DEL
-&hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S              &kp T                     &kp G         &trans  &trans  &kp M                   &kp N                         &kp E      &kp I    &kp O     &hrm_sticky LGUI
-&hrm_sticky LSHFT     &kp Z  &kp X  &kp C              &kp D                     &kp V                         &kp K                   &kp H                         &kp COMMA  &kp DOT  &kp FSLH  &sl 4
-                                    &hrm_sticky LCTRL  &better_hold_tap 2 SPACE  &mt LGUI TAB                  &hrm_sticky LEFT_SHIFT  &better_hold_tap 1 BACKSPACE  &kp ENTER
+&kp TAB               &kp Q  &kp W  &kp F              &kp P                           &kp B         &trans  &trans  &kp J      &kp L                               &kp U                             &kp Y    &kp SQT   &kp DEL
+&hrm_sticky LEFT_ALT  &kp A  &kp R  &kp S              &kp T                           &kp G         &trans  &trans  &kp M      &kp N                               &kp E                             &kp I    &kp O     &hrm_sticky LGUI
+&hrm_sticky LSHFT     &kp Z  &kp X  &kp C              &kp D                           &kp V                         &kp K      &kp H                               &kp COMMA                         &kp DOT  &kp FSLH  &sl 4
+                                    &hrm_sticky LCTRL  &better_layer_hold_tap 2 SPACE  &mt LGUI TAB                  &kp ENTER  &better_layer_hold_tap 1 BACKSPACE  &shift_key_hold_tap LEFT_SHIFT 0
             >;
         };
 
