@@ -218,7 +218,7 @@
         Base_cole {
             label = "Base_cole";
             bindings = <
-&kp TAB            &kp Q  &kp W  &kp F                      &kp P      &kp B                         &trans  &trans  &kp J                           &kp L          &kp U                             &kp Y    &kp SQT   &kp DEL
+&kp TAB            &kp Q  &kp W  &kp F                      &kp P      &kp B                         &trans  &trans  &kp J                           &kp L          &kp U                             &kp Y    &kp SQT   &kp LEFT_ALT
 &hrm_sticky LGUI   &kp A  &kp R  &kp S                      &kp T      &kp G                         &trans  &trans  &kp M                           &kp N          &kp E                             &kp I    &kp O     &kp SEMI
 &hrm_sticky LSHFT  &kp Z  &kp X  &kp C                      &kp D      &kp V                                         &kp K                           &kp H          &kp COMMA                         &kp DOT  &kp FSLH  &sl 3
                                  &better_mod_tap LCTRL ESC  &kp SPACE  &better_layer_hold_tap 2 TAB                  &better_layer_hold_tap 1 ENTER  &kp BACKSPACE  &sticky_hold_tap LGUI LEFT_SHIFT
