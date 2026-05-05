@@ -249,10 +249,10 @@
 
         Function {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4      &kp F5          &kp F6       &trans  &trans  &kp F7              &kp F8                     &kp F9                  &kp F10                 &kp F11                 &kp F12
-&trans  &trans  &trans  &trans      &trans          &trans       &trans  &trans  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &trans
-&to 4   &trans  &trans  &sys_reset  &studio_unlock  &bootloader                  &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &hrm_sticky LEFT_ALT
-                        &trans      &trans          &trans                       &trans              &trans                     &trans
+&kp F1  &kp F2  &kp F3      &kp F4      &kp F5          &kp F6       &trans  &trans  &kp F7              &kp F8                     &kp F9                  &kp F10                 &kp F11                 &kp F12
+&trans  &trans  &trans      &trans      &trans          &trans       &trans  &trans  &RGB_TOG_SHIFT_OFF  &RGB_NEXT_MODE_SHIFT_PREV  &RGB_HUE_UP_SHIFT_DOWN  &RGB_SAT_UP_SHIFT_DOWN  &RGB_BRI_UP_SHIFT_DOWN  &trans
+&to 4   &trans  &bt BT_CLR  &sys_reset  &studio_unlock  &bootloader                  &OUT_TOG_SHIFT_USB  &BT_0_SHIFT_CLEAR          &BT_1_SHIFT_CLEAR       &BT_2_SHIFT_CLEAR       &BT_3_SHIFT_CLEAR       &hrm_sticky LEFT_ALT
+                            &trans      &trans          &trans                       &trans              &trans                     &trans
             >;
 
             label = "Function";
